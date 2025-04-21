@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* font-family: "Poppins", sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+  width: 15px;
+  background-color: #212121;
+  border-left: 5px solid #ff0077 ;
+  padding: 2px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #ff0077;
+  
+  
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  color: white;
+  font-family: "Lora", serif;
+  background-color: #212121;
+  height: 100%;
+  overflow-x: hidden;
+  z-index: 10;
+}
+
+.capa {
+  height: 700px;
+  /* margin-right: 3000px; */
+  z-index: 1;
+  background-image: url(/imagens/F\ U\ T\ U\ R\ E.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-bottom: 5px solid #ff0077;
+  box-shadow: 0px 0px 30px #000;
+
+
+}
+
+.a {
+   /* border: solid 2px red; */
+  height: 500px; 
+   display: flex; 
+margin-left: 130px;
+   font-size: 50px;
+}
+
+.b {
+   /* border: solid 2px yellow; */
+  width: 200px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 200px;
+ margin-left: 430px;}
+
+.navbar {
+  /* border: solid 2px blue;*/
+  width: 20%;
+  background-color: black;
+}
+
+/* INICIO TITULO ANIMADO  */
+.txt-animado {
+
+  font-size: 65px;
+  font-weight: 100;
+  text-align: center;
+
+  margin-top: 10%;
+  margin-left: -250px;
+  /* border: solid 2px red; */
+}
+
+
+.txt-animado span {
+  position: relative;
+}
+
+
+.txt-animado span::before {
+  content: "";
+  color: #ff007b;
+  animation: palavras 20s infinite;
+}
+
+
+.txt-animado span::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  /*border-left: 2px solid #ff007b;*/
+  right: -10px;
+  animation: cursor .10s infinite, digita 20s steps(15) infinite;
+  width: calc(100% + 20px);
+  background-color: #212121;
+}
+
+
+@keyframes digita {
+
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 20px);
+  }
+}
+
+
+@keyframes cursor {
+
+  0%,
+  100% {
+    border-left: 2px solid #ff007b;
+  }
+}
+
+
+
+
+@keyframes palavras {
+
+  0%,
+  100% {
+    content: "Portfólio 2025";
+  }
+}
+
+/* FIM DO TITULO ANIMADO */
+
+/* INICIO NAV BAR */
+nav.menu-lateral {
+  width: 80px;
+  height: 100%;
+  background-color: #202020;
+  padding: 40px 0 40px 1%;
+  box-shadow: 3px 0 0 #f07;
+  z-index: 1000;
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: .5s;
+  gap: 30px;
+  font-size: 36px;
+}
+
+nav.menu-lateral.expandir {
+  width: 300px;
+}
+
+.btn-expandir {
+  width: 100%;
+  padding-left: 10px;
+  padding-bottom: 25PX;
+}
+
+.btn-expandir>i {
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li.item-menu {
+  transition: .2s;
+}
+
+ul li.ativo {
+  background-color: rgb(255, 0, 119);
+}
+
+ul li.item-menu:hover {
+  background: #f07;
+}
+
+ul li.item-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px 4%;
+  display: flex;
+  margin-bottom: 20px;
+  line-height: 40px;
+}
+
+ul li.item-menu a .txt-link {
+  margin-left: 70px;
+  transition: .5s;
+  opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link {
+  margin-right: 40px;
+  opacity: 1;
+}
+
+ul li.item-menu a .icon>i {
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+/* FINAL NAV BAR */
+
+/* INICIO TEXTO SOBRE */
+.titulo {
+  margin-top: 5%;
+  margin-left: 45%;
+  font-size: 80px;
+  display: flex;
+  /* border: solid red 2px; */
+  text-align: center;
+}
+.titulo span{
+  color: #ff0077;
+  margin-left: 15px;
+}
+
+.texto-sobre {
+  margin-top: 5%;
+  margin-left: 45%;
+  font-size: 20px;
+  /* border: solid red 2px; */
+}
+.espaço{
+  /* border: solid red 2px; */
+  margin: auto;
+  margin-top: 10%;
+  border-bottom: 5px solid #ff0077;
+  box-shadow: 0px 0px 30px #000;
+
+}
+/* FIM TEXTO SOBRE */
+
+.tituloMat{
+  /* border: solid 2px yellow; */
+  margin-left: 35%;
+  margin-top: 35px;
+  font-size: 70px;
+}
+.tituloMat span{
+color: #ff0077;
+}
+
+.botao {
+  text-align: center;
+  /* margin-top: 50%; */
+}
+
+/* BOTÃO PORTFÓLIO */
+button {
+  background-image: linear-gradient(45deg, #ff0077, #ff0077);
+  padding: 20px 40px;
+  font-size: 24px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 70px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  margin-right: 70px;
+}
+
+@keyframes anima {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+button:hover {
+  animation-name: anima;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+/* FIM BOTAO PORTFOLIO */
+
+/* INICIO MATERIAS */
+.materias{
+  border-bottom: 5px solid #ff0077;
+  box-shadow: 0px 0px 30px #000;
+
+  /* border: 3px solid red; */
+  width: 100%;
+  height: 600px;
+  z-index: 5;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  display: flex;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.materias .box-materias{
+  border: 5px solid #ff0077;
+  height: 100%;
+  width: 80vh;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  transition: .5s;
+  border-radius: 20px;
+  /* box-shadow: 3px 0 0 #f07; */
+}
+.materias .box-materias .img{
+  background-position: center;
+  background-size: 145%;
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+}
+.materias .box-materias .img.mtm{
+background-image: url(/imagens/Design\ sem\ nome.png);
+}
+.materias .box-materias .img.mtm{
+  background-image: url(/imagens/mtm1.png);
+}
+.materias .box-materias .img.linguagens{
+  background-image: url(/imagens/linguagenscap.png);
+}
+.materias .box-materias .img.natureza{
+  background-image: url(/imagens/naturezacapa.png);
+}
+.materias .box-materias .img.tecnico{
+  background-image: url(/imagens/tecnicocap.png);
+}
+
+.materias .box-materias .img .interface{
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  transition: .5s;
+  opacity: 0%;
+  padding-top: 70%;
+}
+.materias .box-materias .img .interface:hover{
+  background-image: linear-gradient(to top, #000, transparent);
+  opacity: 100%;
+  
+}
+.materias .box-materias:hover{
+  scale: calc(1.02);
+}
+.materias .box-materias .img .interface h3{
+  font-size: 36px;
+  /* margin-top: 70%; */
+}
+/* FIM MATERIAS */
+
+/* PAG MATERIAS */
+.capaMtm{
+  height: 700px;
+  /* margin-right: 3000px; */
+  z-index: 1;
+  background-image: url(/imagens/capamtm.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  align-items: center;
+  border-bottom: 5px solid #ff0077;
+  box-shadow: 0px 0px 30px #000;
+}
+.Trimestre{
+  border: solid 2px #ff0077;
+  text-align: center;
+  margin: auto;
+  font-size: 70px;
+  background-color: #ff0077;
+  box-shadow: 0px 0px 30px #000;
+}
+.atividades{
+  /* border: solid 2px red; */
+  /* margin-top: 20%; */
+}
+.atividades .atv1{
+  border-radius: 20px;
+}
+.capaLing{
+  height: 700px;
+  /* margin-right: 3000px; */
+  z-index: 1;
+  background-image: url(/imagens/capaLin.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  align-items: center;
+  border-bottom: 5px solid #ff0077;
+  box-shadow: 0px 0px 30px #000;
+}
+.img-humanas{
+  height: 590px;
+  /* border: solid 5px yellow; */
+  /* margin-right: 3000px; */
+  z-index: 1;
+  background-image: url(/imagens/Design\ sem\ nome.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  align-items: center;
+ 
+}
+.capaNat{
+  height: 700px;
+  /* margin-right: 3000px; */
+  z-index: 1;
+  background-image: url(/imagens/capaNat.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  align-items: center;
+  border-bottom: 5px solid #ff0077;
+  box-shadow: 0px 0px 30px #000;
+}
+.capatec{
+  height: 700px;
+  /* margin-right: 3000px; */
+  z-index: 1;
+  background-image: url(/imagens/capaTec.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  align-items: center;
+  border-bottom: 5px solid #ff0077;
+  box-shadow: 0px 0px 30px #000;
+  margin-right: 50px;
+}
+.link{
+  color: white;
+  border: none;
+}
+h1{
+  align-items: center;
+  text-align: center;
+  font-size: 45px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* ATIVIDADES MODAL INICIO */
+.image-container {
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
+  /* border: solid 5px yellow; */
+  margin-left: 250px;
+}
+
+.hover-img {
+  transition: transform 0.4s ease;
+  width: 300px;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.hover-img:hover {
+  transform: scale(1.05);
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  color: black;
+  display: flex;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 90%;
+  gap: 20px;
+}
+
+.modal-img {
+  width: 40%;
+  border-radius: 10px;
+}
+
+.modal-texts {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-text {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.sub-text {
+  font-size: 1rem;
+  color: black;
+}
+
+.close-btn{
+  color: white;
+}
+
+.close-btn {
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 10;
+}
+/* FIM ATIVIDADES MODAL */
+.info{
+  /* border: solid 3px red; */
+  color: #fff;
+  background-color: #ff0077;
+  text-decoration: none;
+
+}
